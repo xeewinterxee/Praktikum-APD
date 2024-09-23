@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106119_Rafly-Rahmat-Wijaya-A-S_POSTTEST3"/>
+        <attribute name="authors" value="acer"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-23 03:52:46 AM"/>
+        <attribute name="created" value="YWNlcjtERVNLVE9QLVU0TzkxMzM7MjAyNC0wOS0yMTswOTowOTowMyBBTTsyNjg4"/>
+        <attribute name="edited" value="YWNlcjtERVNLVE9QLVU0TzkxMzM7MjAyNC0wOS0yMzswMzo1Mjo0NiBBTTsyOzI3OTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="hsd meaning is harga setelah diskon"/>
+            <declare name="jenisMobil, harga, hsdTesla, hsdToyota, hsdHyundai" type="Integer" array="False" size=""/>
+            <declare name="diskonTesla, diskonToyota, diskonHyundai" type="Real" array="False" size=""/>
+            <declare name="nama, mobil" type="String" array="False" size=""/>
+            <output expression="&quot;Kami memiliki 3 mobil yang sedang ready, harga ketiga mobil sama Rp.300.000.000 dengan masing-masing diskon :Tesla 17%, Toyota 21%, Hyundai 23%&quot;" newline="True"/>
+            <output expression="&quot;Dengan atas nama siapa?&quot;" newline="True"/>
+            <input variable="nama"/>
+            <output expression="&quot;Baik &quot;" newline="False"/>
+            <output expression="nama" newline="False"/>
+            <output expression="&quot;, ingin membeli mobil apa?&quot;" newline="True"/>
+            <input variable="mobil"/>
+            <output expression="&quot;Masukkan harga mobil :&quot;" newline="True"/>
+            <input variable="harga"/>
+            <if expression="mobil == &quot;tesla&quot;">
+                <then>
+                    <assign variable="diskonTesla" expression="harga * 0.17"/>
+                    <assign variable="hsdTesla" expression="harga - diskonTesla"/>
+                    <output expression="&quot;Harga yang harus &quot;" newline="False"/>
+                    <output expression="nama" newline="False"/>
+                    <output expression="&quot; bayar : &quot;" newline="False"/>
+                    <output expression="hsdTesla" newline="True"/>
+                </then>
+                <else>
+                    <if expression="mobil == &quot;toyota&quot;">
+                        <then>
+                            <assign variable="diskonToyota" expression="harga * 0.21"/>
+                            <assign variable="hsdToyota" expression="harga - diskonToyota"/>
+                            <output expression="&quot;Harga yang harus &quot;" newline="False"/>
+                            <output expression="nama" newline="False"/>
+                            <output expression="&quot; bayar : &quot;" newline="False"/>
+                            <output expression="hsdToyota" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="mobil == &quot;hyundai&quot;">
+                                <then>
+                                    <assign variable="diskonHyundai" expression="harga * 0.23"/>
+                                    <assign variable="hsdHyundai" expression="harga - diskonHyundai"/>
+                                    <output expression="&quot;Harga yang harus &quot;" newline="False"/>
+                                    <output expression="nama" newline="False"/>
+                                    <output expression="&quot; bayar : &quot;" newline="False"/>
+                                    <output expression="hsdHyundai" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Terima kasih &quot;" newline="False"/>
+                                    <output expression="nama" newline="False"/>
+                                    <output expression="&quot; telah mengunjungi toko kami&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
